@@ -1,0 +1,19 @@
+<app-admin-header></app-admin-header>
+<h3>Maestros</h3>
+<table>
+  <tbody>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Carrera-Imparte</th>
+      </tr>
+  <tr *ngFor="let maestro of maestros">
+    <td>{{maestro.nombre}}</td>
+    <td>{{maestro.apellido}}</td>
+    <td>{{maestro.correo}}</td>
+    <td>{{maestro.carrera_imparte}}</td>
+  </tr>
+  </tbody>
+</table>
+

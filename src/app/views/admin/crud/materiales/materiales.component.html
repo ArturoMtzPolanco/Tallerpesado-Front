@@ -1,0 +1,32 @@
+<app-admin-header></app-admin-header>
+<h3>Materiales</h3>
+<table>
+  <tbody>
+  <tr>
+    <th>ID</th>
+    <th>Nombre</th>
+    <th>Carrera</th>
+    <th>Cantidad</th>
+  </tr>
+  <tr *ngFor="let material of materiales">
+    <td>{{material.id_material}}</td>
+    <td>{{material.nombre}}</td>
+    <td>{{material.id_carrera}}</td>
+    <td>{{material.cant_almacen}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<h4>Agregar Materiales</h4>
+<form #materialesForm="ngForm" (ngSubmit)="adddMaterial(materialesForm.value)">
+
+  <label>Nombre</label><br>
+  <input type="text" [ngModel] name="nombre"><br>
+  <label>Carrera</label><br>
+  <input type="text" [ngModel] name="id_carrera"><br>
+  <label>Cantidad en Almacén</label><br>
+  <input type="text" [ngModel] name="cant_almacen"><br><br>
+
+  <input type="submit" value="Agregar"><br>
+
+</form>

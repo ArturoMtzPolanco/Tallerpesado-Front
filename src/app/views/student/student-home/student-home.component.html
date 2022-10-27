@@ -1,0 +1,41 @@
+<app-admin-header></app-admin-header>
+<h3>Formulario de solicitudes</h3>
+<form #solicitudesForm="ngForm" (ngSubmit)="addSolicitudes(solicitudesForm.value)">
+  <label>Selecciona tu carrera</label><br>
+  <select [ngModel] name="id_carrera">
+    <option [value]="carrera.id_carrera" *ngFor="let carrera of carreras">{{carrera.nombre_carrera}}</option>
+  </select><br><br>
+
+
+  <label>Selecciona tu material</label><br>
+  <select [ngModel] name="id_material"  >
+    <option [value]="material.id_material" *ngFor="let material of materiales">{{material.nombre}}</option>
+  </select><br><br>
+
+  <label>Cantidad</label><br>
+  <input type="number" [ngModel] name="cantidad"><br><br>
+
+  <label>Descripcion</label><br>
+  <input type="text" [ngModel] name="descripcion"><br><br>
+
+  <label>Dia de practica</label>
+  <input type="date" [ngModel] name="fecha"><br><br>
+
+  <label>Hora de practica </label>
+  <input type="time" [ngModel] name="hora_practica"><br><br>
+
+  <label>Hora de entrega</label>
+  <input type="time" [ngModel] name="hora_entrega"><br><br>
+
+  <label>Encargado de práctica</label><br>
+  <select [ngModel] name="id_maestro" >
+    <option [value]="maestro.id_maestro" *ngFor="let maestro of maestros">{{maestro.nombre}}{{maestro.apellido}} </option>
+  </select>
+<br><br>
+  <label>Acuerdo de Responsiva</label>
+  <input type="checkbox" [ngModel] name="acuerdo">
+  <br><br>
+  <input type="submit" value="Enviar">
+
+
+</form>

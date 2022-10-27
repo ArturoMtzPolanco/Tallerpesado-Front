@@ -1,0 +1,17 @@
+
+<h4>Agregar Maestros</h4>
+<form #maestrosForm="ngForm" (ngSubmit)="addMaestros(maestrosForm.value)">
+
+  <label>Nombre</label><br>
+  <input type="text" [ngModel] name="nombre"><br>
+  <label>Apellido</label><br>
+  <input type="text" [ngModel] name="apellido"><br>
+  <label>Correo</label><br>
+  <input type="text" [ngModel] name="correo"><br>
+  <label>Carrera Imparte</label><br>
+  <input type="text" [ngModel] name="carrera_imparte"><br><br>
+
+  <input type="submit" value="Agregar"><br>
+
+</form>
+
